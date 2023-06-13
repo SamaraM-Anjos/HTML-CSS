@@ -1,0 +1,159 @@
+/* 
+    #27374D
+    #526D82
+    #9DB2BF
+    #DDE6ED
+*/
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;1,300;1,400;1,500&family=Comfortaa:wght@300;500;600;700&family=Quicksand:wght@300;400;500;700&family=Tsukimi+Rounded:wght@400;500;600;700&display=swap');
+
+/* 
+    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Tsukimi Rounded', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+*/  
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #DDE6ED;
+}
+/* Menu de Navegação */
+
+.principal{
+    display: flex;
+    justify-content: left;
+    background-color: #27374D;
+    position: sticky;
+    top: 0;
+}
+.nav-bar{
+    display: flex;
+}
+.nav-bar li{
+    margin-left: 20px;
+}
+.principal .nav-bar a{
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+    color: white;    
+}
+ul, li, a{
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Sections */
+
+.html > svg{
+    height: 100px;
+}
+.css > svg{
+    height: 100px;
+}
+.section1{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.section1 > .info{
+    align-content: center;
+    flex: 1 1 200px; /* Usado para indicar o quanto vai diminuir ou aumentar */
+    margin: 10px;
+}
+.info h1{
+    text-align: center;
+    font-family:'Comfortaa', cursive;
+    color: #526D82;
+}
+.info p{
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+    font-size:large;
+}
+.info a{
+    color:#526D82;
+    text-decoration-line:underline;
+}
+
+
+.section2{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.section2 > .myself{
+    align-content: center;
+    flex: 1 1 200px;
+    margin: 10px;
+}
+.myself h2{
+    text-align:center;
+    font-family: 'Comfortaa', cursive;
+    color: #27374D;
+}
+.myself p{
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+    font-size: large;
+}
+
+
+.section3{
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.áreas > span{
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+.section3 > .áreas{
+    align-content: center;
+    flex: 1 1 200px;
+    margin: 30px;
+}
+.áreas > .html, .css{
+    text-align: justify;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#section4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+.h2{
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+.h3{
+    text-align: center;
+}
+.ativ1, .ativ2, .ativ3{
+    text-align: center;
+    margin-left: -40px;
+    font-family:'Chakra Petch', sans-serif;
+    font-size: large;
+    margin-bottom: 40%;
+}
+.ativ1 a:hover, .ativ2 a:hover, .ativ3 a:hover{
+    color:#526D82;
+}
+
+
+
+
+
+
+
+
+
+
+

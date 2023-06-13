@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid/Flexbox</title>
+    <style>
+        /* Paleta de cores
+        '50': #fffbeb
+        '100': #fef3c7
+        '200': #fde58a
+        '300': #fbd24e
+        '400': #fabe25
+        '500': #f49d0c
+        '600': #d87607
+        '700': #bc560a
+        '800': #923f0e
+        '900': #78340f
+        '950': #451a03
+        */
+        body, ul,li,p{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #923f0e;
+            font-size: 125%;
+        }
+        h1{
+            color: #fbd24e;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            margin-top: 100px;
+        }
+        #icon{
+            width: 5em;
+            height: 5em;
+        }
+        .header{
+            background:#fde58a;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .nav-bar{
+            display: flex;
+        }
+        .nav-bar li{
+            margin-left: 10px;
+        }
+        .nav-bar li a{
+            display: block;
+            padding: 10px;
+        }
+
+        /* Flexbox */
+        img{
+            max-width: 100%;
+            display: block;
+            border-radius: 10px ;
+        }
+
+        .flex{
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 800px; /* Usar de acordo com os outros elementos do site */
+            margin: 0 auto;
+        }
+        .flex > div{
+            flex: 1 1 200px;
+            margin: 10px;
+        }
+
+        /* Grid 1 */
+
+        .grid1{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; /*ou --> repeat (3, 1fr) */
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+            grid-gap: 20px;
+        }
+
+        .grid1 > div:nth-child(n + 4){
+            /* Seletor dos filhos da div*/
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            align-items: center;
+        }
+        .grid1 > div.propaganda{
+            grid-column: 1;
+            grid-row: 2 /5; /* Parecido com o colspan e rolspan, o barra indica onde começa e onde termina*/
+            display: block;
+        }
+        /* Responsividade */
+        @media (max-width: 600px){
+            .grid1{
+                grid-template-columns: 1fr 1fr;
+            }
+            .grid1 > div:nth-child(n + 4){
+                display: block;
+            }
+            .grid1 > div.propaganda{
+                grid-column: auto;
+                grid-row: auto;
+                order: -1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 576 512" id="icon"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#f49d0c}</style><path d="M64 64C28.7 64 0 92.7 0 128V384c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V128c0-35.3-28.7-64-64-64H64zm64 320H64V320c35.3 0 64 28.7 64 64zM64 192V128h64c0 35.3-28.7 64-64 64zM448 384c0-35.3 28.7-64 64-64v64H448zm64-192c-35.3 0-64-28.7-64-64h64v64zM288 160a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="../index.html" class="atalho">Início</a></li>
+                <li><a href="#" class="atalho">Produtos</a></li>
+                <li><a href="#" class="atalho">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Section Flexbox</h1>
+    <section class="flex">
+        <div>
+            <img src="../Imagens/amarelo2.jpg">
+            <p>Amarelo 1</p>
+        </div>
+        <div>
+            <img src="../Imagens/amarelo3.jpg">
+            <p>Amarelo 2</p>
+        </div>
+        <div>
+            <img src="../Imagens/amarelo2.jpg">
+            <p>Amarelo 3</p>
+        </div>
+        <div>
+            <img src="../Imagens/amarelo3.jpg">
+            <p>Amarelo 3</p>
+        </div>
+        <div>
+            <img src="../Imagens/amarelo2.jpg">
+            <p>Amarelo 2</p>
+        </div>
+        <div>
+            <img src="../Imagens/amarelo3.jpg">
+            <p>Amarelo 1</p>
+        </div>
+    </section>
+    <h1>Section GRID 1</h1>
+    <section class="grid1">
+        <div>
+            <img src="../Imagens/amarelo2.jpg">
+            <p>Amarelo 1</p>
+        </div>
+        <div>
+            <img src="../Imagens/amarelo3.jpg">
+            <p>Amarelo 2</p>
+        </div>
+        <div>
+            <img src="../Imagens/amarelo2.jpg">
+            <p>Amarelo 3</p>
+        </div>
+        <div>
+            <img src="../Imagens/amarelo3.jpg">
+            <p>Amarelo 3</p>
+        </div>
+        <div>
+            <img src="../Imagens/amarelo2.jpg">
+            <p>Amarelo 2</p>
+        </div>
+        <div>
+            <img src="../Imagens/amarelo3.jpg">
+            <p>Amarelo 1</p>
+        </div>
+        <div>
+            <img src="../Imagens/amarelo2.jpg">
+            <p>Amarelo 1</p>
+        </div>
+        <div>
+            <img src="../Imagens/amarelo3.jpg">
+            <p>Amarelo 2</p>
+        </div>
+        <div>
+            <img src="../Imagens/amarelo2.jpg">
+            <p>Amarelo 3</p>
+        </div>
+        <div class="propaganda">
+            <img src="../Imagens/amarelo.jpg">
+            <p>Propaganda</p>
+        </div>
+    </section>
+</body>
+</html>
